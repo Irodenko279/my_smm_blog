@@ -1,0 +1,94 @@
+{% extends "blog_app/base.html" %}
+{% block content %}
+{% load static %}
+<div class="headers">
+<img src="{% static 'images\bg7.jpeg' %}" class="images"><div class="center"><strong>What about SMM?</strong></div></div><br><br>
+<p id='text'>Social media marketing (SMM) is a form of Internet marketing that utilizes social networking websites as a marketing tool. The goal of SMM is to produce content that users will share with their social network to help a company increase brand exposure and broaden customer reach. </p><br>
+<p id='title'>How can you manage all these social conversations and provide real-time customer service?</p>
+<div class="container">
+<div class="card-deck">
+<div class="card" >
+ <img src="{% static 'images/ins.png' %}" width="60"height="60">
+  <div class="card-body">
+    <h4 class="card-title">Instagram</h4>
+    <p class="card-text">In our proposition we can work with instagram story content, with target ad from Facebook . We can addd photo and eding photo, we can make different videos,and send the messege. all you instagram only in our hend. Only what you nead, whire for as. We can healp you in every sytuation . Massfollowing, maslikeng, maslooking is a yesterday /. Now only whrite promotions.</p>
+  </div>
+  </div>
+<div class="card" >
+<img src="{% static 'images/fb.png' %}" width="60"height="60" >
+  <div class="card-body">
+    <h4 class="card-title">Facebook</h4>
+    <p class="card-text"> Facebook Groups are a hot spot for engagement and a place to focus social media efforts in 2019.Stories are an interesting tool, because it is a relatively new and very popular format, that enables brands to be more innovative and creative in their communication. Moreover, Facebook allowed companies to use ads on Stories, which makes it an even more attractive tool for brands.</p>
+  </div>
+  </div>
+<div class="card" >
+<img src="{% static 'images/tr.png' %}" width="60"height="60" >
+  <div class="card-body">
+    <h4 class="card-title">TripAdvisor</h4>
+    <p class="card-text">TripAdvisor was an early adopter of user-generated content. The website services are free to users, who provide most of the content, and the website is supported by a hotel booking facility and an advertising business model.</p>
+  </div>
+  </div>
+  </div>
+ <br>
+ <div class="card-deck">
+  <div class="card">
+  <img src="{% static 'images/tel.png' %}" width="60" height="60">
+  <div class="card-body">
+    <h4 class="card-title">Telegram</h4>
+    <p class="card-text">Telegram’s main feature list may cross over with other apps, but there are many specific differences between it and its competitors. Here are some of the bigger differences:Secret chats,Self-destruct timers,Large file size limit,Customizations.</p>
+  </div>
+  </div>
+  <div class="card" >
+   <img src="{% static 'images/pi.png' %}" width="60" height="60">
+  <div class="card-body">
+    <h4 class="card-title">Pinterest</h4>
+    <p class="card-text">Pinterest is a social network that allows users to visually share, and discover new interests by posting (known as 'pinning' on 6 Simple Steps to Setting up your Pintrest AccountPinterest) images or videos to their own or others' boards (i.e. a collection of 'pins,' usually with a common theme) and browsing what other users have pinned. Using a visual orientation, the social network is very much focused on the concept of a person's lifestyle, allowing you to share your tastes and interests with others and discovering those of likeminded people..</p>
+  </div>
+  </div>
+  <div class="card" >
+   <img src="{% static 'images/w1.png' %}" width="60" height="60">
+  <div class="card-body">
+    <h4 class="card-title">SEO</h4>
+    <p class="card-text">Search engine optimization, or SEO, is the combination of all of the strategies you can use to help your site’s chances of appearing in search engine results.By doing SEO, you can increase the amount of qualified leads your site gets. This means attracting searchers who are interested in purchasing from or working with you, and have a much greater chance of becoming customers. </p>
+  </div>
+  </div>
+  </div>
+  </div><br><br>
+<p class='texts'>“No matter how big (or small) a brand is, every customer type (including employees, investors, etc.) will expect more personal interaction</p>
+<p class='texts'>Brands that can approach social engagement with a true desire to build relationships will be the winners in 2019 and beyond!</p>
+<p class='texts'>If you want to increase your reach, become an invaluable resource for your audience, and interact with them accordingly,</p>
+<p class='texts'>They’ll promote your brand for you, and your reach will grow considerably.</p>
+
+<div class="slider">
+   <div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images\t1.jpg' %}" height="300"><img src="{% static 'images\t2.jpg' %}" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\stor.png' %}" height="300"><img src="{% static 'images\inss2.jpg' %}" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\t3.jpg' %}" height="300"><img src="{% static 'images\t5.jpg' %}" height="300">
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+<br><br>
+<h1 class='texts' style="color:#800a08">About my company</h1><br>
+<p class='texts'>“One of the absolute best things that brands can do on social media is to be responsive to their customers and engaged with their audience”</p>
+{% endblock %}

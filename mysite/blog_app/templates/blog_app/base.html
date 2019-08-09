@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My SMM Blog</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Medium Style Editor -->
+<script src="//cdn.jsdelivr.net/npm/medium-editor@5.23.2/dist/js/medium-editor.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@5.23.2/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+<!-- Custom Css -->
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<!-- Font  -->
+<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Farro&display=swap" rel="stylesheet">
+</head>
+<body class="loader">
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fontst">
+      <div class="container">
+          <a class="navbar-brand" href="#"><img src="{% static 'images/smm.png' %}" alt="logo" style="width:100px;height:100px;"></a>
+        <ul class=" navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'post_list' %}"><strong>My blog</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><strong>About</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/Irodenko279/"><strong>GitHub</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/k_irodenko/"><strong>Instagram</strong></a></li>
+        </ul>
+        <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'post_new' %}"><strong>New Post</strong></a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'post_draft_list' %}"> <strong>Draft</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}"><strong>Log out</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"><strong>Welcome: {{ user.username }}</strong> </a>
+            </li>
+            {% else %}
+            <li><a class='nav navbar-nav' href="{% url 'login' %}"> <button  class='btn btn-danger' type="button" name="LOGIN"><strong>LOGIN</strong></button></a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<br>
+{% block content %}
+{% endblock %}
+
+ <div class="row">
+ <div class="col-md-4">
+     <div class="blog_posts"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
